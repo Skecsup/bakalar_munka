@@ -6,9 +6,9 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  transition: border-bottom-left-radius 0.4s ease-in-out;
   @media (max-width: 768px) {
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 25px;
   }
 `;
 export const Logo = styled.div`
@@ -28,12 +28,11 @@ export const Menu = styled.div`
   text-align: center;
 
   @media (max-width: 768px) {
-    margin: ${(props) => (props.isOpen ? "10px 10px" : "0")};
     overflow: hidden;
     flex-direction: column;
     width: 100%;
     max-height: ${(props) => (props.isOpen ? "300px" : "0")};
-    transition: margin 0.1s ease-in-out, max-height 0.4s ease-in-out;
+    transition: max-height 0.4s ease-in-out;
   }
 `;
 export const MenuLink = styled.div`
@@ -42,6 +41,10 @@ export const MenuLink = styled.div`
   cursor: pointer;
   font-size: 25px;
   font-weight: 100;
+  transition: color 0.4s ease-in-out;
+  &:hover {
+    color: #56417f;
+  }
 `;
 export const Hamburger = styled.div`
   display: none;
@@ -54,7 +57,7 @@ export const Hamburger = styled.div`
     width: 25px;
     margin-bottom: 4px;
     border-radius: 2px;
-    background-color: #997cd6;
+    background: #997cd6;
   }
   @media (max-width: 768px) {
     display: flex;
@@ -70,4 +73,12 @@ export const Signin = styled.div`
   font-weight: 100;
   cursor: pointer;
   font-size: 25px;
+  transition: background-color 0.4s ease-in-out;
+  &:hover {
+    background-color: #56417f;
+  }
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
 `;
