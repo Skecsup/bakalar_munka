@@ -5,6 +5,8 @@ import { Container, RightSide, LeftSide } from "./Home_Styling";
 function Home() {
   const style = {
     textDecoration: "none",
+    width: "20%",
+    marginLeft: "25px",
   };
   return (
     <Container>

@@ -6,6 +6,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   height: calc(100vh - 104px);
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 export const RightSide = styled.div`
   width: 50%;
@@ -15,6 +18,10 @@ export const RightSide = styled.div`
   transition: background-image 1.5s ease-in-out;
   &:hover {
     background-image: url(${kep2});
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100vh;
   }
 `;
 
@@ -37,10 +44,10 @@ export const LeftSide = styled.div`
   div {
     font-weight: 500;
     text-align: center;
-    font-size: 3vh;
+    font-size: 2vh;
     padding: 15px;
-    width: 20%;
-    margin: 25px;
+    width: 13vh;
+
     border: 3px solid #997cd6;
     color: #997cd6;
     transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
@@ -49,5 +56,9 @@ export const LeftSide = styled.div`
       background-color: #997cd6;
       color: white;
     }
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 25px;
   }
 `;
