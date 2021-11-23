@@ -6,6 +6,7 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  filter: drop-shadow(0 0 5px #aaa);
   transition: border-bottom-left-radius 0.4s ease-in-out;
   @media (max-width: 768px) {
     border-bottom-left-radius: 25px;
