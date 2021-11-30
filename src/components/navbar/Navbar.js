@@ -10,6 +10,10 @@ import {
 
 import logo from "../../assets/img/vizjel.png";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+
+const element = <FontAwesomeIcon icon={faShoppingCart} />;
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +45,7 @@ function Navbar() {
           <MenuLink>ABOUT US</MenuLink>
         </Link>
         <Link style={style} to="/Basket">
-          <MenuLink>BASKET</MenuLink>
+          <MenuLink>{element}</MenuLink>
         </Link>
         <Link style={style} to="/Signin">
           <Signin>SIGN IN</Signin>

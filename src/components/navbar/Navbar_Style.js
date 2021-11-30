@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display: flex;
   background-color: #eae4f6;
   justify-content: space-between;
