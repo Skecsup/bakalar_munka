@@ -1,15 +1,10 @@
 import React, { useState } from "react";
-import {
-  ShopContainer,
-  ShopInnerContainer,
-  ShopSideMenu,
-  ShopTopMenu,
-} from "./Shop_Styling";
+import { ShopContainer, ShopTopMenu } from "./Shop_Styling";
 
 import Products from "./UI/Products";
 
 function Shop() {
-  const [state, setState] = useState({
+  const [state] = useState({
     products: [
       {
         id: 1,
@@ -33,57 +28,19 @@ function Shop() {
         price: 20,
       },
       {
-        id: 3,
-        name: "Tricikli",
-        desc: "Nagyon fain Tricikli",
+        id: 4,
+        name: "Vodor",
+        desc: "nagyon kiraly kis vodor",
         kep: "https://cdn.corporatefinanceinstitute.com/assets/products-and-services-1024x1024.jpeg",
-        price: 20,
-      },
-      {
-        id: 3,
-        name: "Tricikli",
-        desc: "Nagyon fain Tricikli",
-        kep: "https://cdn.corporatefinanceinstitute.com/assets/products-and-services-1024x1024.jpeg",
-        price: 20,
-      },
-      {
-        id: 3,
-        name: "Tricikli",
-        desc: "Nagyon fain Tricikli",
-        kep: "https://cdn.corporatefinanceinstitute.com/assets/products-and-services-1024x1024.jpeg",
-        price: 20,
-      },
-      {
-        id: 3,
-        name: "Tricikli",
-        desc: "Nagyon fain Tricikli",
-        kep: "https://cdn.corporatefinanceinstitute.com/assets/products-and-services-1024x1024.jpeg",
-        price: 20,
+        price: 5,
       },
     ],
   });
 
   return (
     <ShopContainer>
-      <ShopTopMenu></ShopTopMenu>
-      <ShopInnerContainer>
-        <ShopSideMenu>
-          <input type="text" />
-          <div>
-            <input type="checkbox" id="funyiro" name="funyiro" />
-            <label for="funyiro">Funyiro</label>
-          </div>
-          <div>
-            <input type="checkbox" id="jatek" name="jatek" />
-            <label for="jatek">Jatek</label>
-          </div>
-          <div>
-            <input type="checkbox" id="vegyszer" name="vegyszer" />
-            <label for="vegyszer">Vegyszer</label>
-          </div>
-        </ShopSideMenu>
-        <Products elements={state.products} />
-      </ShopInnerContainer>
+      <ShopTopMenu>xd</ShopTopMenu>
+      <Products elements={state.products} />
     </ShopContainer>
   );
 }

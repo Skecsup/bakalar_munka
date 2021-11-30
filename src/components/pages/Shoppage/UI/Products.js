@@ -13,6 +13,7 @@ function Products(props) {
       {props.elements.map((element, index) => {
         return (
           <Product
+            key={index}
             id={element.id}
             name={element.name}
             desc={element.desc}

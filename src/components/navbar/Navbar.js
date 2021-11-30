@@ -38,11 +38,11 @@ function Navbar() {
         <Link style={style} to="/">
           <MenuLink>HOME</MenuLink>
         </Link>
-        <Link style={style} to="/Shop">
-          <MenuLink>SHOP</MenuLink>
-        </Link>
         <Link style={style} to="/About">
           <MenuLink>ABOUT US</MenuLink>
+        </Link>
+        <Link style={style} to="/Shop">
+          <MenuLink>SHOP</MenuLink>
         </Link>
         <Link style={style} to="/Basket">
           <MenuLink>{element}</MenuLink>

@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../../store/cart-context";
+import Products from "./Shoppage/UI/Products";
 
 function Basket() {
+  const cartCtx = useContext(CartContext);
   return (
     <div>
-      <h1>BASKET PAGE</h1>
+      <Products elements={cartCtx.cartItems} />
     </div>
   );
 }
