@@ -10,6 +10,7 @@ export const StyledProduct = styled.div`
   border-radius: 25px;
   filter: drop-shadow(0 0 0.75rem #997cd6);
   width: max-content;
+  height: 40vh;
 
   img {
     width: 30vh;

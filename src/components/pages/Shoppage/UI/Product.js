@@ -7,11 +7,9 @@ function Product(props) {
 
   const itemIsInCart = cartCtx.itemIsInCart(props.id);
 
-  console.log(`${itemIsInCart} ---- ${props.id}`);
-
-  function toggleCartStatusHandler() {
+  function addToCartHandler() {
     if (itemIsInCart) {
-      cartCtx.removeFromCart(props.id);
+      cartCtx.cartItems.find((element) => element.id === props.id).count += 1;
     } else {
       cartCtx.addToCart({
         id: props.id,
@@ -19,6 +17,7 @@ function Product(props) {
         desc: props.desc,
         kep: props.kep,
         price: props.price,
+        count: props.count,
       });
     }
   }
@@ -33,9 +32,7 @@ function Product(props) {
         <strong>€</strong>
       </p>
 
-      <button onClick={toggleCartStatusHandler}>
-        {itemIsInCart ? "Remove from cart" : "Add to cart"}
-      </button>
+      <button onClick={addToCartHandler}>Add to cart</button>
     </StyledProduct>
   );
 }

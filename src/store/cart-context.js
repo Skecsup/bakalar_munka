@@ -12,20 +12,18 @@ export function CartContextProvider(props) {
   const [cartItems, setcartItems] = useState([]);
 
   function addToCartHandler(cartItem) {
-    console.log("addtocart");
     setcartItems((prevCartItems) => {
       return prevCartItems.concat(cartItem);
     });
   }
   function removeFromCartHandler(productId) {
-    console.log("removefromcart");
     setcartItems((prevCartItems) => {
       return prevCartItems.filter((product) => product.id !== productId);
     });
   }
 
-  function itemIsInCartHandler(productId) {
-    return cartItems.some((product) => product.id === productId);
+  function itemIsInCartHandler(productID) {
+    return cartItems.some((product) => product.id === productID);
   }
 
   const context = {

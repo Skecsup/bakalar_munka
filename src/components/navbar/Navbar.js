@@ -44,7 +44,7 @@ function Navbar() {
         <Link style={style} to="/Shop">
           <MenuLink>SHOP</MenuLink>
         </Link>
-        <Link style={style} to="/Basket">
+        <Link style={style} to="/Cart">
           <MenuLink>{element}</MenuLink>
         </Link>
         <Link style={style} to="/Signin">

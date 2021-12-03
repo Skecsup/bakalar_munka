@@ -3,14 +3,14 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Homepage/Home";
 import Shop from "./components/pages/Shoppage/Shop";
 import About from "./components/pages/About";
-import Basket from "./components/pages/Basket";
+import Cart from "./components/pages/Cartpage/Cart";
 import Signin from "./components/pages/Signinpage/Signin";
 
 function App() {
   const home = [<Navbar />, <Home />];
   const shop = [<Navbar />, <Shop />];
   const about = [<Navbar />, <About />];
-  const basket = [<Navbar />, <Basket />];
+  const cart = [<Navbar />, <Cart />];
   const signin = [<Navbar />, <Signin />];
 
   return (
@@ -19,7 +19,7 @@ function App() {
         <Route key="1" path="/" element={home} />
         <Route key="2" path="/Shop" element={shop} />
         <Route key="3" path="/About" element={about} />
-        <Route key="4" path="/Basket" element={basket} />
+        <Route key="4" path="/Cart" element={cart} />
         <Route key="5" path="/Signin" element={signin} />
       </Routes>
     </div>

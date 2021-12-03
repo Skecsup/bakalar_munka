@@ -19,6 +19,7 @@ function Products(props) {
             desc={element.desc}
             kep={element.kep}
             price={element.price}
+            count={element.count}
           />
         );
       })}
