@@ -9,7 +9,7 @@ function Product(props) {
 
   function addToCartHandler() {
     if (itemIsInCart) {
-      cartCtx.cartItems.find((element) => element.id === props.id).count += 1;
+      cartCtx.cartItems.find((elemnt) => elemnt.id === props.id).count += 1;
     } else {
       cartCtx.addToCart({
         id: props.id,
@@ -27,10 +27,7 @@ function Product(props) {
       <h1>{props.name}</h1>
       <p>{props.desc}</p>
       <img src={props.kep} alt="kep" />
-      <p>
-        {props.price}
-        <strong>€</strong>
-      </p>
+      <strong>{props.price}€</strong>
 
       <button onClick={addToCartHandler}>Add to cart</button>
     </StyledProduct>

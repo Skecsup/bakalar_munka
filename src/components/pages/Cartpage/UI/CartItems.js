@@ -2,11 +2,8 @@ import React from "react";
 import CartItem from "./CartItem";
 
 function CartItems(props) {
-  const style = {
-    border: "1px solid red",
-  };
   return (
-    <div style={style}>
+    <div>
       {props.cartItems.map((cartItem, index) => {
         return (
           <CartItem

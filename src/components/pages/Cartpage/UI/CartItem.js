@@ -11,16 +11,22 @@ function CartItem(props) {
 
   return (
     <StyledCartItem>
-      <div>
-        <h1>{props.name}</h1>
-        <p>
-          {props.price}
-          <strong>€</strong>
-        </p>
-        <p>{props.count}</p>
-        <button onClick={removeFromCartHandler}>Remove from Cart</button>
-      </div>
-      <img src={props.kep} alt="kep" />
+      <section>
+        <img src={props.kep} alt="kep" />
+        <div>
+          <p>{props.name}</p>
+          <p>{props.price}€</p>
+
+          <button onClick={removeFromCartHandler}>Remove</button>
+        </div>
+      </section>
+      <input
+        onChange={(event) => cartCtx.productChange(event, props.id)}
+        value={props.count}
+        type="number"
+        min="1"
+      />
+      <div>{props.price * props.count} EUR</div>
     </StyledCartItem>
   );
 }

@@ -6,6 +6,8 @@ export const CartContext = createContext({
   addToCart: (cartItem) => {},
   removeFromCart: (productId) => {},
   itemIsInCart: (productId) => {},
+  productInc: (productId) => {},
+  productChange: (event, productId) => {},
 });
 
 export function CartContextProvider(props) {
@@ -25,6 +27,13 @@ export function CartContextProvider(props) {
   function itemIsInCartHandler(productID) {
     return cartItems.some((product) => product.id === productID);
   }
+  function ChangeProductCont(event, productID) {
+    let newArr = [...cartItems];
+    newArr.find((element) => element.id === productID).count = parseInt(
+      event.target.value
+    );
+    setcartItems(newArr);
+  }
 
   const context = {
     cartItems: cartItems,
@@ -32,6 +41,7 @@ export function CartContextProvider(props) {
     addToCart: addToCartHandler,
     removeFromCart: removeFromCartHandler,
     itemIsInCart: itemIsInCartHandler,
+    productChange: ChangeProductCont,
   };
 
   return (

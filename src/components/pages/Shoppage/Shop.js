@@ -38,20 +38,12 @@ function Shop() {
         price: 5,
         count: 1,
       },
-      {
-        id: 5,
-        name: "Rebeka",
-        desc: "Rebeka nagyon szép lány",
-        kep: "https://scontent-vie1-1.xx.fbcdn.net/v/t1.18169-9/20842048_163243887557537_5219618750663357408_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=19026a&_nc_ohc=k69sZVaN4FQAX98hgle&tn=pei7TITL-wGJ-VGg&_nc_ht=scontent-vie1-1.xx&oh=7dc0383f022fc7051ee930da62bb3ef3&oe=61CB0D54",
-        price: 100,
-        count: 1,
-      },
     ],
   });
 
   return (
     <ShopContainer>
-      <ShopTopMenu>xd</ShopTopMenu>
+      {/* <ShopTopMenu>xd</ShopTopMenu> */}
       <Products elements={state.products} />
     </ShopContainer>
   );
